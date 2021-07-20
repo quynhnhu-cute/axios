@@ -1,0 +1,179 @@
+.about {
+  width: 100%;
+  padding: 20px 0 100px;
+  position: relative;
+  // img {
+  //   width: 100%;
+  // }
+  &__content {
+    padding-top: 80px;
+  }
+  // &__img,
+  &__title {
+    width: 100%;
+  }
+  &__small {
+    font-size: 1.1rem;
+    color: $color-purple-1;
+    font-weight: $fw-2;
+  }
+  &__big {
+    font-weight: $fw-3;
+    font-size: 1.5em;
+  }
+  &__background1 {
+    position: absolute;
+    top: 0;
+    img {
+      width: 100%;
+    }
+  }
+  &__background2 {
+    position: absolute;
+    bottom: 0;
+    img {
+      width: 100%;
+    }
+  }
+}
+.member {
+  position: relative;
+  background-color: #dcd1f3;
+  padding-top: 30px;
+  &__background1 {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    img {
+      width: 100%;
+    }
+  }
+  .card {
+    z-index: 10;
+  }
+}
+
+.contact {
+  padding: 70px;
+  padding-bottom: 30px;
+  position: relative;
+  &__img {
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+  &__card {
+    margin-left: 50px;
+    width: 35%;
+    height: 80%;
+    padding: 30px;
+    h4 {
+      font-size: 2.5rem;
+      font-weight: $fw-2;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .input {
+      margin-bottom: 15px;
+      textarea,
+      input {
+        width: 100%;
+      }
+    }
+    .spacing {
+      margin: 0 10px;
+    }
+  }
+  &__background1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    img {
+      width: 100%;
+    }
+  }
+  &__button {
+    font-size: 0.7em;
+    font-weight: $fw-2;
+    padding: 15px 58px;
+    margin-top: 30px;
+  }
+}
+
+@include responsive('large') {
+  .about {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      img {
+        width: 80%;
+      }
+    }
+  }
+  .contact {
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+    &__img {
+      width: 80%;
+    }
+    &__card {
+      margin: 0;
+      width: 100%;
+      .input {
+        width: 100%;
+      }
+    }
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@include responsive('medium') {
+  .contact {
+    &__flex {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+@include responsive('small') {
+  .member,
+  .footer {
+    .row {
+      display: flex;
+      flex-direction: column;
+      .col-6 {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.animate-slide {
+  animation: slideInFromLeft 1s ease-in;
+  // animation: ease-in 1s;
+}
+.animate-fade {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

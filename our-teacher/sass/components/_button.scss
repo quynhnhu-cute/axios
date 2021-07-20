@@ -1,0 +1,30 @@
+.purple-btn {
+  font-size: $fs-1;
+  font-weight: $fw-1;
+  box-shadow: inset 0 0 0 3em $color-purple-1;
+  color: $color-white-1;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 50px;
+  transition: all 0.5s;
+  &:hover {
+    box-shadow: inset 0 0 0 1px $color-purple-1;
+    color: $color-purple-1;
+    background-color: $color-white-1;
+  }
+}
+.white-btn {
+  font-size: $fs-1;
+  font-weight: $fw-1;
+  box-shadow: inset 0 0 0 3em $color-white-1;
+  color: #000;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 50px;
+  transition: all 0.5s;
+  &:hover {
+    box-shadow: inset 0 0 0 1px $color-white-1;
+    color: $color-white-1;
+    background-color: $color-purple-1;
+  }
+}
